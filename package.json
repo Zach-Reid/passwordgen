@@ -1,0 +1,15 @@
+{
+  "name": "passwordgen",
+  "version": "1.0.0",
+  "description": "QAP 1 assignment, generates passwords for users using provided arguments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+"bin": {
+  "passgen": "./index.js"
+},
+  "author": "Zachary Reid, @zachary.reid@keyin.com",
+  "license": "MIT"
+}
