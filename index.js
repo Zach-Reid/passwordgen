@@ -40,10 +40,20 @@ if (arguments.includes("help") || arguments.includes("-help") || arguments.inclu
     
     
     `) }
-
+//The question
 else if (arguments.includes("pass") || arguments.includes("-pass") || arguments.includes("--pass")) {
-    rl.question('Enter the number of characters that you would like to generate: ', (input) => {
-        const length = parseInt(input, 10);
+    rl.question('Enter the number of characters that you would like to generate (or type "default" for 8): ', (input) => {
+        let length;
+
+        //If it's default, make it the default down here
+        if (input.toLowerCase() === "default") {
+            length = 8;
+        } else {
+        
+        length = parseInt(input, 10);
+        }
+
+
         //not a number or negative checker
         if (isNaN(length) || length <= 0) {
             console.log('Invalid input. Please use a positive number.');
